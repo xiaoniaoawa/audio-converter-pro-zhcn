@@ -1,0 +1,55 @@
+# Arquivo .gitignore
+
+# Ambiente virtual do Python
+.venv/
+venv/
+env/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Configurações locais
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# Logs e arquivos temporários
+logs/
+*.log
+*.tmp
+*.out
+*.pid
+*.seed
+*.log.*
+
+# Arquivo de configuração de ambiente (NUNCA compartilhe dados sensíveis)
+.env
+
+# Dependências específicas
+node_modules/
+chromedriver/
+chromedriver.log
+chromedriver_py.egg-info/
+
+# Arquivos de teste
+test_results/
+coverage/
+*.coverage
+
+# Cache e outros arquivos temporários
+.cache/
+build/
+dist/
+*.egg-info
+__pycache__/
+*.spec
+
+# Arquivos do sistema operacional
+Thumbs.db
+.DS_Store
+desktop.ini
