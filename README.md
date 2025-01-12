@@ -187,8 +187,8 @@ Contributions are welcome! Feel free to open **issues** or submit **pull request
 
 This project is distributed under the MIT License. Feel free to use, modify, and distribute.
 
-**Author**: Your Name/Team  
-**Contact**: your.email@domain.com
+**Author**: Lucas Albuquerque
+**Contact**: lucas.albuquerque.gk@gmail.com
 
 ## Documentation in Other Languages
 - [Portuguese](readme/pt/README.md)

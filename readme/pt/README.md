@@ -187,5 +187,5 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir **issues** ou en
 
 Este projeto é distribuído sob a licença MIT. Sinta-se livre para usar, modificar e distribuir.
 
-**Autor**: Seu Nome/Equipe  
-**Contato**: seu.email@dominio.com
+**Autor**: Lucas Albuquerque 
+**Contato**: lucas.albuquerque.gk@gmail.com

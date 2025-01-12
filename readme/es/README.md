@@ -187,5 +187,5 @@ Tiempo total de ejecución: 12.45s.
 
 Este proyecto se distribuye bajo la licencia MIT. Siéntase libre de usarlo, modificarlo y distribuirlo.
 
-**Autor**: Su Nombre/Equipo  
-**Contacto**: su.email@dominio.com
+**Autor**: Lucas Albuquerque
+**Contacto**: lucas.albuquerque.gk@gmail.com
