@@ -1,27 +1,27 @@
 
-# Audio Converter Pro (.m4a to .mp3)
+# Audio Converter Pro (.m4a 到 .mp3)
 
-This project aims to convert audio files from the `.m4a` format to `.mp3` using **Python** and the **pydub** library (which depends on ffmpeg).
+这个项目会用 **Python** 和 **pydub** 库 (该库依赖ffmpeg)把 `.m4a` 转换格式到 `.mp3` .
 
 ---
 
 ## Index
-- [Requirements](#requirements)
-- [Installation](#installation)
-  - [Set Up Virtual Environment](#set-up-virtual-environment)
-- [Usage](#usage)
-  - [Single File Conversion Example](#single-file-conversion-example)
-  - [Multiple Files Conversion Example](#multiple-files-conversion-example)
-- [Logs and Progress Bar](#logs-and-progress-bar)
-- [Other Notes](#other-notes)
-- [Contributing](#contributing)
-- [License](#license)
+- [前置需求](#requirements)
+- [安装](#installation)
+  - [配置虚拟容器](#set-up-virtual-environment)
+- [使用](#usage)
+  - [单文件使用样例](#single-file-conversion-example)
+  - [多文件使用样例](#multiple-files-conversion-example)
+- [日志和进度条](#logs-and-progress-bar)
+- [其他提醒](#other-notes)
+- [贡献](#contributing)
+- [许可](#license)
 
 ---
 
-## Requirements
+## 前置需求
 
-- Python 3.8 or later
+- Python 3.8 或更新
 - ffmpeg installed on your system:
 
 ### Ubuntu/Debian
@@ -41,40 +41,40 @@ brew install ffmpeg
 
 ---
 
-## Installation
+## 安装
 
-Clone the repository (or download the ZIP):
+克隆仓库 (或下载 ZIP):
 ```bash
 git clone https://github.com/user/audio-converter-pro.git
 ```
 
-Navigate to the project folder:
+到项目文件夹:
 ```bash
 cd audio-converter-pro
 ```
 
-### Python Dependencies
+### Python 依赖
 
-Install dependencies from `requirements.txt`:
+从 `requirements.txt` 安装依赖:
 ```bash
 pip install -r requirements.txt
 ```
 
-Key dependencies include:
+包含关键依赖（Key dependencies include）:
 - **pydub** – A Python library for easy audio operations.
 - Others listed in `requirements.txt`.
 
 ---
 
-### Set Up Virtual Environment
+### 配置虚拟容器
 
-It is recommended to create and activate a virtual environment before installing dependencies (to avoid conflicts with globally installed libraries).
+建议在安装库之前设置虚拟环境 (用来保护全局库和其他依赖).
 
 ```bash
 python -m venv venv
 ```
 
-Activate the virtual environment:
+激活虚拟环境:
 
 - **Linux/Mac**:
     ```bash
@@ -85,23 +85,24 @@ Activate the virtual environment:
     venv\Scripts\activate
     ```
 
-Now, install the dependencies inside the virtual environment:
+然后，在虚拟环境里面安装依赖:
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## Usage
+## 使用
 
-The main script for this project is `convert_m4a_to_mp3.py`, which can be run directly from the command line.
+主程序文件是 `convert_m4a_to_mp3.py`, 它能直接使用命令行启动.
 
 It accepts the following arguments:
-1. `<input_path>`: Path to a `.m4a` file or a directory containing `.m4a` files.
-2. `[output_directory]` (optional): Directory where the `.mp3` files will be saved.
+1. `<input_path>`: 包含`.m4a`的文件夹或文件路径.
+2. `[output_directory]` (可选): 要让 `mp3` 文件存储在哪.
 
-### Single File Conversion Example
+### 单文件使用样例
 
+PS:翻译不下去了，明天再翻译
 In the same location:
 ```bash
 python convert_m4a_to_mp3.py "C:\music\track1.m4a"
@@ -112,7 +113,7 @@ To a specific output directory:
 python convert_m4a_to_mp3.py "C:\music\track1.m4a" "C:\output_mp3"
 ```
 
-### Multiple Files Conversion Example
+### 多文件使用样例
 
 In the same location:
 ```bash
@@ -126,7 +127,7 @@ python convert_m4a_to_mp3.py "C:\music" "C:\output_mp3"
 
 ---
 
-## Logs and Progress Bar
+## 日志和进度条
 
 The script displays:
 - **Progress bar**: Shows the index of the current file, total files, and completion percentage.
@@ -151,7 +152,7 @@ Total execution time: 12.45s.
 
 ---
 
-## Other Notes
+## 其他提醒
 
 - If you encounter issues with backslashes (`\`), use quotes for paths containing spaces or special characters.
 - To support different extensions or output formats, modify the code to use:
@@ -162,7 +163,7 @@ Total execution time: 12.45s.
 
 ---
 
-## Contributing
+## 贡献
 
 Contributions are welcome! Feel free to open **issues** or submit **pull requests**.
 
@@ -183,14 +184,14 @@ Contributions are welcome! Feel free to open **issues** or submit **pull request
 
 ---
 
-## License
+## 许可
 
 This project is distributed under the MIT License. Feel free to use, modify, and distribute.
 
 **Author**: Lucas Albuquerque
 **Contact**: lucas.albuquerque.gk@gmail.com
 
-## Documentation in Other Languages
+## 其它语言的文档
 - [Portuguese](readme/pt/README.md)
 - [Spanish](readme/es/README.md)
 - [French](readme/fr/README.md)
