@@ -5,13 +5,13 @@ from pydub import AudioSegment
 
 def convert_m4a_to_mp3(input_file, output_file=None):
     """
-    Converte um arquivo .m4a para .mp3.
+    将m4a文件转换为mp3文件
 
     :param input_file: Caminho completo do arquivo .m4a.
-    :param output_file: Caminho de saída (opcional). Se None,
-                        será gerado no mesmo local e nome do arquivo de entrada,
-                        apenas mudando a extensão para .mp3.
-    :return: Caminho completo do arquivo .mp3 gerado.
+    :param output_file: 输出路径（可选）。如果无,
+                        将以相同目录和相同名称生成转换过的文件,
+                        也就是（只从文件名角度看）只将扩展名变成mp3.
+    :return: 生成的 .mp3 文件的完整路径.
     """
     if not output_file:
         output_file = os.path.splitext(input_file)[0] + '.mp3'
@@ -22,7 +22,7 @@ def convert_m4a_to_mp3(input_file, output_file=None):
 
 def log_progress(index, total, filename, output_filename, status='OK', error_msg=None, elapsed_time=None):
     """
-    Exibe uma mensagem de progresso com contador e opcionalmente uma barra de progresso.
+    显示带有计数器和进度条的进度信息
 
     :param index: Índice atual (1-based).
     :param total: Total de itens a processar.
@@ -72,14 +72,14 @@ def main():
     # Se for um arquivo específico
     if os.path.isfile(input_path):
         if not input_path.lower().endswith('.m4a'):
-            print(f"Entrada não é um arquivo .m4a: {input_path}")
+            print(f"输入的文件 {input_path} 不是.m4a文件")
             sys.exit(1)
 
         total_files = 1
         success_count = 0
         fail_count = 0
 
-        print("Iniciando conversão de arquivo único...\n")
+        print("开始单个文件转换...\n")
 
         try:
             start_time = time.time()  # tempo inicial do arquivo
@@ -112,18 +112,18 @@ def main():
 
         # Resumo final
         elapsed_time_total = time.time() - start_time_total
-        print(f"\nConversão concluída! Sucessos: {success_count}, Falhas: {fail_count}, Total: {total_files}.")
-        print(f"Tempo total de execução: {elapsed_time_total:.2f}s.")
+        print(f"\n转换完成！成功个数: {success_count}, 失败个数: {fail_count}, Total: {total_files}.")
+        print(f"运行耗时: {elapsed_time_total:.2f}s.")
 
     # Se for um diretório
     elif os.path.isdir(input_path):
         files_m4a = [f for f in os.listdir(input_path) if f.lower().endswith('.m4a')]
         total_files = len(files_m4a)
         if total_files == 0:
-            print(f"Nenhum arquivo .m4a encontrado em: {input_path}")
+            print(f"在 {input_path} 下未找到m4a文件")
             sys.exit(0)
 
-        print(f"Iniciando conversão de {total_files} arquivo(s) .m4a em '{input_path}'...\n")
+        print(f"开始转换 {input_path} 中的 {total_files} 个m4a文件 arquivo(s) .m4a em...\n")
 
         success_count = 0
         fail_count = 0
@@ -162,14 +162,14 @@ def main():
 
         # Resumo final
         elapsed_time_total = time.time() - start_time_total
-        print("\nConversão concluída!")
-        print(f" - Sucessos : {success_count}")
-        print(f" - Falhas   : {fail_count}")
-        print(f" - Total    : {total_files}")
-        print(f"Tempo total de execução: {elapsed_time_total:.2f}s.")
+        print("\n转换完成！")
+        print(f" - 成功数 : {success_count}")
+        print(f" - 失败数   : {fail_count}")
+        print(f" - 总计    : {total_files}")
+        print(f"运行时间: {elapsed_time_total:.2f}s.")
 
     else:
-        print(f"Erro: {input_path} não é um arquivo nem um diretório válido.")
+        print(f"错误: {input_path} 不是有效文件或目录。")
         sys.exit(1)
 
 if __name__ == '__main__':
